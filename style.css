@@ -1,0 +1,83 @@
+/* GLOBAL */
+
+* {
+  margin: 0;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 3em;
+}
+
+p {
+  font-family: "Roboto", sans-serif;
+  font-size: 1em;
+}
+
+figcaption,
+.attribution {
+  font-family: "Lato", sans-serif;
+  font-weight: 300;
+  font-size: 0.75em;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ARTICLE */
+
+.article {
+  max-width: 1000px;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-gap: 20px 30px;
+}
+
+.article > * {
+  grid-column: 2 / -2;
+}
+
+/* FIGURES */
+
+.article > figure {
+  grid-column: 1 / -1;
+}
+
+/* BLOCKQUOTE */
+
+.article blockquote {
+  grid-column: 1 / -1;
+  margin: 20px;
+}
+
+blockquote > p {
+  font-family: "Lato", sans-serif;
+  font-weight: 900;
+  font-size: 1.6em;
+  line-height: 1.4em;
+}
+
+/* ASIDES */
+
+.aside {
+  grid-row: span 3;
+}
+
+.aside h2 {
+  font-size: 1.6em;
+}
+
+.aside-left {
+  grid-column: 1 / span 1;
+  text-align: right;
+}
+
+.aside-right {
+  grid-column: span 1 / -1;
+  text-align: left;
+}
