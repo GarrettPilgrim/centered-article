@@ -2,6 +2,9 @@
 
 * {
   margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 h1,
@@ -31,8 +34,9 @@ img {
 /* ARTICLE */
 
 .article {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 50px auto;
+  padding: 5%;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
   grid-gap: 20px 30px;
@@ -40,6 +44,18 @@ img {
 
 .article > * {
   grid-column: 2 / -2;
+}
+
+@media (max-width: 850px) {
+  .article {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .article {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* FIGURES */
@@ -81,3 +97,4 @@ blockquote > p {
   grid-column: span 1 / -1;
   text-align: left;
 }
+
